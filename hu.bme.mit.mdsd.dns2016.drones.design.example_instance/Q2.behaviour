@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<behaviour:DroneBehaviour
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:behaviour="hu.bme.mit.mdsd.dns2016.drones.behaviour"
+    xmlns:drones="hu.bme.mit.mdsd.dns2016.drones"
+    name="Q2">
+  <instructions
+      xsi:type="behaviour:MoveTo">
+    <fieldObject
+        xsi:type="drones:MovableObject"
+        href="Instance.drones#Block_A2"/>
+  </instructions>
+  <instructions
+      xsi:type="behaviour:WaitForMessage"
+      type="Block_B_Lifted"/>
+  <instructions
+      xsi:type="behaviour:Lift">
+    <target
+        href="Instance.drones#Block_A2"/>
+  </instructions>
+  <instructions
+      xsi:type="behaviour:MoveTo">
+    <fieldObject
+        xsi:type="drones:ImmovableObject"
+        href="Instance.drones#Bridge_Location_X2"/>
+  </instructions>
+  <instructions
+      xsi:type="behaviour:PlaceObject"/>
+  <instructions
+      xsi:type="behaviour:Communicate"
+      type="Block_A2_Placed"/>
+  <instructions
+      xsi:type="behaviour:MoveTo">
+    <fieldObject
+        xsi:type="drones:ChargeStation"
+        href="Instance.drones#Q2_Home_Station"/>
+  </instructions>
+  <drones href="Instance.drones#Quadcopter_Q2"/>
+</behaviour:DroneBehaviour>

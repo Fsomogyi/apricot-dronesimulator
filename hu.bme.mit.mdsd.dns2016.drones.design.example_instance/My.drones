@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<drones:Mission xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:drones="hu.bme.mit.mdsd.dns2016.drones" name="Unnamed_Mission">
+  <fieldObjects xsi:type="drones:ImmovableObject" name="Mordor"/>
+  <fieldObjects xsi:type="drones:ChargeStation" name="ChargeStation_3"/>
+  <fieldObjects xsi:type="drones:MovableObject" name="The_One_Ring">
+    <parameters key="evilness" value="9001"/>
+  </fieldObjects>
+  <drones name="Frodo" chargeStation="ChargeStation_3" supportedActions="Run" knownObjects="Mordor">
+    <battery lifeTime="30.0" rechargeTime="18.0" remainingLifeTime="10.0"/>
+  </drones>
+  <drones name="Saruman">
+    <battery remainingLifeTime="90.0"/>
+  </drones>
+  <temporalObjects xsi:type="drones:Battery"/>
+  <temporalObjects xsi:type="drones:Action" name="Fight"/>
+  <actions name="Run"/>
+</drones:Mission>

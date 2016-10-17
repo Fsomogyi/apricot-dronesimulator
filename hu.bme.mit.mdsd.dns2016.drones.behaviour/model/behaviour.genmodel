@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/hu.bme.mit.mdsd.dns2016.drones.behaviour/src"
+    modelPluginID="hu.bme.mit.mdsd.dns2016.drones.behaviour" modelName="Behaviour"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../hu.bme.mit.mdsd.dns2016.drones/model/drones.genmodel#//drones"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>behaviour.ecore</foreignModel>
+  <genPackages prefix="Behaviour" basePackage="hu.bme.mit.mdsd.dns2016" disposableProviderFactory="true"
+      ecorePackage="behaviour.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="behaviour.ecore#//ConditionKind">
+      <genEnumLiterals ecoreEnumLiteral="behaviour.ecore#//ConditionKind/EQUALS"/>
+      <genEnumLiterals ecoreEnumLiteral="behaviour.ecore#//ConditionKind/NOT_EQUALS"/>
+      <genEnumLiterals ecoreEnumLiteral="behaviour.ecore#//ConditionKind/GREATER_THAN"/>
+      <genEnumLiterals ecoreEnumLiteral="behaviour.ecore#//ConditionKind/LESSER_THAN"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="behaviour.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//DroneBehaviour">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviour.ecore#//DroneBehaviour/instructions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference behaviour.ecore#//DroneBehaviour/drones"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//DroneBehaviour/canBeInterrupted"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="behaviour.ecore#//Instruction"/>
+    <genClasses ecoreClass="behaviour.ecore#//MoveTo">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference behaviour.ecore#//MoveTo/fieldObject"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//Pause">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//Pause/duration"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//PerformAction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference behaviour.ecore#//PerformAction/action"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference behaviour.ecore#//PerformAction/target"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//Choice">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviour.ecore#//Choice/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviour.ecore#//Choice/trueBranch"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviour.ecore#//Choice/falseBranch"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//Condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//Condition/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference behaviour.ecore#//Condition/fieldObject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//Condition/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//Condition/value"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//WaitForMessage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//WaitForMessage/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//WaitForMessage/timeout"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviour.ecore#//WaitForMessage/whenArrived"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviour.ecore#//WaitForMessage/whenLost"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//While">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviour.ecore#//While/instructions"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference behaviour.ecore#//While/condition"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//Instruct">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference behaviour.ecore#//Instruct/instructions"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//Lift">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference behaviour.ecore#//Lift/target"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviour.ecore#//PlaceObject"/>
+    <genClasses ecoreClass="behaviour.ecore#//SendMessage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviour.ecore#//SendMessage/messageType"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,33 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: hu.bme.mit.mdsd.dns2016.drones.behaviour.text
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: hu.bme.mit.mdsd.dns2016.drones.behaviour.text; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: hu.bme.mit.mdsd.dns2016.drones.behaviour,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib,
+ hu.bme.mit.mdsd.dns2016.drones.behaviour.queries;bundle-version="0.0.1",
+ org.eclipse.incquery.runtime;bundle-version="1.1.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: hu.bme.mit.mdsd.dns2016.drones.behaviour.text.generator,
+ hu.bme.mit.mdsd.dns2016.drones.behaviour.text.services,
+ hu.bme.mit.mdsd.dns2016.drones.behaviour.text,
+ hu.bme.mit.mdsd.dns2016.drones.behaviour.text.serializer,
+ hu.bme.mit.mdsd.dns2016.drones.behaviour.text.validation,
+ hu.bme.mit.mdsd.dns2016.drones.behaviour.text.formatting,
+ hu.bme.mit.mdsd.dns2016.drones.behaviour.text.parser.antlr,
+ hu.bme.mit.mdsd.dns2016.drones.behaviour.text.scoping,
+ hu.bme.mit.mdsd.dns2016.drones.behaviour.text.parser.antlr.internal,
+ hu.bme.mit.mdsd.dns2016.drones.behaviour.text.behavdslmodel,
+ hu.bme.mit.mdsd.dns2016.drones.behaviour.text.behavdslmodel.impl,
+ hu.bme.mit.mdsd.dns2016.drones.behaviour.text.behavdslmodel.util
+Import-Package: org.apache.log4j

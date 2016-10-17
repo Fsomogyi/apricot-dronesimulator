@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:drones="hu.bme.mit.mdsd.dns2016.drones" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style" xmi:id="_QOCgcCKlEea86cFLTkBfmw" selectedViews="_uRiJQCKlEea86cFLTkBfmw" version="10.1.0.201509162000">
+  <semanticResources>starcraft.drones</semanticResources>
+  <semanticResources>platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign</semanticResources>
+  <semanticResources>environment:/viewpoint</semanticResources>
+  <semanticResources>miner.behav</semanticResources>
+  <semanticResources>guard.behav</semanticResources>
+  <semanticResources>guard.behaviour</semanticResources>
+  <semanticResources>platform:/resource/hu.bme.mit.mdsd.dns2016.drones.behaviour/model/behaviour.genmodel</semanticResources>
+  <semanticResources>platform:/resource/hu.bme.mit.mdsd.dns2016.drones/model/drones.genmodel</semanticResources>
+  <semanticResources>platform:/resource/hu.bme.mit.mdsd.dns2016.drones.behaviour/model/behaviour.ecore</semanticResources>
+  <semanticResources>platform:/resource/hu.bme.mit.mdsd.dns2016.drones/model/drones.ecore</semanticResources>
+  <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
+  <semanticResources>GoT.drones</semanticResources>
+  <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_uRiJQCKlEea86cFLTkBfmw">
+    <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_2F9u4CKlEea86cFLTkBfmw" name="Mining Mission Diagram">
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_2F-V8CKlEea86cFLTkBfmw" source="DANNOTATION_CUSTOMIZATION_KEY">
+        <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_2F-V8SKlEea86cFLTkBfmw"/>
+      </ownedAnnotationEntries>
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_2GQp0CKlEea86cFLTkBfmw" source="GMF_DIAGRAMS">
+        <data xmi:type="notation:Diagram" xmi:id="_2GQp0SKlEea86cFLTkBfmw" type="Sirius" element="_2F9u4CKlEea86cFLTkBfmw" measurementUnit="Pixel">
+          <children xmi:type="notation:Node" xmi:id="_41tSoCKlEea86cFLTkBfmw" type="2001" element="_40t0ICKlEea86cFLTkBfmw">
+            <children xmi:type="notation:Node" xmi:id="_41yyMCKlEea86cFLTkBfmw" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_41yyMSKlEea86cFLTkBfmw" y="-21"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_416uACKlEea86cFLTkBfmw" type="3005" element="_40-S0CKlEea86cFLTkBfmw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_416uASKlEea86cFLTkBfmw" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_416uAiKlEea86cFLTkBfmw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_41tSoSKlEea86cFLTkBfmw" fontName="Segoe UI" fontHeight="11" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_41tSoiKlEea86cFLTkBfmw" x="246" y="72" width="120" height="120"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_xS9dcCKmEea86cFLTkBfmw" type="2001" element="_xS4k8CKmEea86cFLTkBfmw">
+            <children xmi:type="notation:Node" xmi:id="_xS-EgCKmEea86cFLTkBfmw" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_xS-EgSKmEea86cFLTkBfmw" y="-21"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xS-EgiKmEea86cFLTkBfmw" type="3005" element="_xS5MACKmEea86cFLTkBfmw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_xS-EgyKmEea86cFLTkBfmw" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xS-EhCKmEea86cFLTkBfmw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_xS9dcSKmEea86cFLTkBfmw" fontName="Segoe UI" fontHeight="11" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xS9dciKmEea86cFLTkBfmw" x="678" y="72" width="120" height="120"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-4rFMCKmEea86cFLTkBfmw" type="2001" element="_-4DaICKmEea86cFLTkBfmw">
+            <children xmi:type="notation:Node" xmi:id="_-4rFMyKmEea86cFLTkBfmw" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_-4rFNCKmEea86cFLTkBfmw" y="-21"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_-4thcCKmEea86cFLTkBfmw" type="3005" element="_-4HrkCKmEea86cFLTkBfmw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_-4thcSKmEea86cFLTkBfmw" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-4thciKmEea86cFLTkBfmw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_-4rFMSKmEea86cFLTkBfmw" fontName="Segoe UI" fontHeight="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-4rFMiKmEea86cFLTkBfmw" x="66" y="96" width="64" height="64"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_B-wsYCKnEea86cFLTkBfmw" type="2001" element="_B-owkCKnEea86cFLTkBfmw">
+            <children xmi:type="notation:Node" xmi:id="_B-wsYyKnEea86cFLTkBfmw" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_B-wsZCKnEea86cFLTkBfmw" y="-21"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_B-wsZSKnEea86cFLTkBfmw" type="3005" element="_B-pXoCKnEea86cFLTkBfmw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_B-wsZiKnEea86cFLTkBfmw" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B-wsZyKnEea86cFLTkBfmw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_B-wsYSKnEea86cFLTkBfmw" fontName="Segoe UI" fontHeight="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B-wsYiKnEea86cFLTkBfmw" x="918" y="100" width="64" height="64"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_G18dwCKnEea86cFLTkBfmw" type="2001" element="_G1Nd8CKnEea86cFLTkBfmw">
+            <children xmi:type="notation:Node" xmi:id="_G18dwyKnEea86cFLTkBfmw" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_G18dxCKnEea86cFLTkBfmw" y="-21"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_G19r4CKnEea86cFLTkBfmw" type="3005" element="_G1S9gCKnEea86cFLTkBfmw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_G19r4SKnEea86cFLTkBfmw" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G19r4iKnEea86cFLTkBfmw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_G18dwSKnEea86cFLTkBfmw" fontName="Segoe UI" fontHeight="15"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G18dwiKnEea86cFLTkBfmw" x="288" y="306" width="64" height="64"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_p0KUICKnEea86cFLTkBfmw" type="2001" element="_pzVNsCKnEea86cFLTkBfmw">
+            <children xmi:type="notation:Node" xmi:id="_p0KUIyKnEea86cFLTkBfmw" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_p0KUJCKnEea86cFLTkBfmw" x="31"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_p0K7MCKnEea86cFLTkBfmw" type="3017" element="_pzkeQCKnEea86cFLTkBfmw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_p0K7MSKnEea86cFLTkBfmw" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p0K7MiKnEea86cFLTkBfmw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_p0KUISKnEea86cFLTkBfmw" fontName="Segoe UI" fontHeight="10" italic="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p0KUIiKnEea86cFLTkBfmw" x="510" y="156" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_tpNdoCKoEea86cFLTkBfmw" type="2001" element="_tpGI4CKoEea86cFLTkBfmw">
+            <children xmi:type="notation:Node" xmi:id="_tpNdoyKoEea86cFLTkBfmw" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_tpNdpCKoEea86cFLTkBfmw" x="-27"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_tpOEsCKoEea86cFLTkBfmw" type="3017" element="_tpGI4SKoEea86cFLTkBfmw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_tpOEsSKoEea86cFLTkBfmw" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tpOEsiKoEea86cFLTkBfmw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_tpNdoSKoEea86cFLTkBfmw" fontName="Segoe UI" fontHeight="10" italic="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tpNdoiKoEea86cFLTkBfmw" x="522" y="96" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_10uGgCKoEea86cFLTkBfmw" type="2001" element="_1z5AECKoEea86cFLTkBfmw">
+            <children xmi:type="notation:Node" xmi:id="_10utkCKoEea86cFLTkBfmw" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_10utkSKoEea86cFLTkBfmw" x="21"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_10v7sCKoEea86cFLTkBfmw" type="3004" element="_1z94kCKoEea86cFLTkBfmw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_10v7sSKoEea86cFLTkBfmw" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_10v7siKoEea86cFLTkBfmw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_10uGgSKoEea86cFLTkBfmw" fontName="Segoe UI" fontHeight="10" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_10uGgiKoEea86cFLTkBfmw" x="456" y="420" width="20" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_XylTICKpEea86cFLTkBfmw" type="2001" element="_XyWCkCKpEea86cFLTkBfmw">
+            <children xmi:type="notation:Node" xmi:id="_Xyl6MCKpEea86cFLTkBfmw" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Xyl6MSKpEea86cFLTkBfmw" y="-21"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Xyl6MiKpEea86cFLTkBfmw" type="3005" element="_XyWpoCKpEea86cFLTkBfmw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_Xyl6MyKpEea86cFLTkBfmw" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xyl6NCKpEea86cFLTkBfmw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_XylTISKpEea86cFLTkBfmw" fontName="Segoe UI" fontHeight="15"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XylTIiKpEea86cFLTkBfmw" x="714" y="324" width="64" height="64"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_qBG5ECKpEea86cFLTkBfmw" type="2001" element="_qBALYCKpEea86cFLTkBfmw">
+            <children xmi:type="notation:Node" xmi:id="_qBG5EyKpEea86cFLTkBfmw" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_qBG5FCKpEea86cFLTkBfmw" x="21"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_qBHgICKpEea86cFLTkBfmw" type="3004" element="_qBALYSKpEea86cFLTkBfmw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_qBHgISKpEea86cFLTkBfmw" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qBHgIiKpEea86cFLTkBfmw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_qBG5ESKpEea86cFLTkBfmw" fontName="Segoe UI" fontHeight="10" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qBG5EiKpEea86cFLTkBfmw" x="840" y="420" width="20" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_hX5DsCKtEeaZxuZdzmvcnA" type="2001" element="_hVwVsCKtEeaZxuZdzmvcnA">
+            <children xmi:type="notation:Node" xmi:id="_hX-jQCKtEeaZxuZdzmvcnA" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_hX-jQSKtEeaZxuZdzmvcnA" x="32"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_hYDbwCKtEeaZxuZdzmvcnA" type="3005" element="_hWR6ICKtEeaZxuZdzmvcnA">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_hYDbwSKtEeaZxuZdzmvcnA" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hYDbwiKtEeaZxuZdzmvcnA"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_hX5DsSKtEeaZxuZdzmvcnA" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hX5DsiKtEeaZxuZdzmvcnA" x="402" y="30" width="31" height="55"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_h0tikCKtEeaZxuZdzmvcnA" type="2001" element="_h0SEwCKtEeaZxuZdzmvcnA">
+            <children xmi:type="notation:Node" xmi:id="_h0tikyKtEeaZxuZdzmvcnA" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_h0tilCKtEeaZxuZdzmvcnA" x="32"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_pj2YgCKtEeaZxuZdzmvcnA" type="3005" element="_pjxgACKtEeaZxuZdzmvcnA">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_pj2YgSKtEeaZxuZdzmvcnA" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pj2YgiKtEeaZxuZdzmvcnA"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_h0tikSKtEeaZxuZdzmvcnA" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_h0tikiKtEeaZxuZdzmvcnA" x="834" y="30" width="31" height="55"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9M2XYCK4EeaEVezlAIB2iw" type="2001" element="_9LN_sCK4EeaEVezlAIB2iw">
+            <children xmi:type="notation:Node" xmi:id="_9M-6QCK4EeaEVezlAIB2iw" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_9M-6QSK4EeaEVezlAIB2iw" y="-21"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_9NJ5YCK4EeaEVezlAIB2iw" type="3005" element="_9LOmwCK4EeaEVezlAIB2iw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_9NJ5YSK4EeaEVezlAIB2iw" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9NJ5YiK4EeaEVezlAIB2iw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_9M2XYSK4EeaEVezlAIB2iw" fontName="Segoe UI" fontHeight="15"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9M2XYiK4EeaEVezlAIB2iw" x="522" y="288" width="64" height="64"/>
+          </children>
+          <styles xmi:type="notation:DiagramStyle" xmi:id="_2GQp0iKlEea86cFLTkBfmw"/>
+          <edges xmi:type="notation:Edge" xmi:id="_islNcCKnEea86cFLTkBfmw" type="4001" element="_ir20sCKnEea86cFLTkBfmw" source="_xS9dcCKmEea86cFLTkBfmw" target="_B-wsYCKnEea86cFLTkBfmw">
+            <children xmi:type="notation:Node" xmi:id="_isnpsCKnEea86cFLTkBfmw" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_isnpsSKnEea86cFLTkBfmw" x="16" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_isoQwCKnEea86cFLTkBfmw" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_isoQwSKnEea86cFLTkBfmw" x="9" y="9"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_isoQwiKnEea86cFLTkBfmw" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_isoQwyKnEea86cFLTkBfmw" x="2" y="8"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_islNcSKnEea86cFLTkBfmw"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_islNciKnEea86cFLTkBfmw" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_islNcyKnEea86cFLTkBfmw" points="[-38, 1, -158, 0]$[120, 1, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ispe4CKnEea86cFLTkBfmw" id="(1.0,0.425)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ispe4SKnEea86cFLTkBfmw" id="(0.0,0.375)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_laaFoCKnEea86cFLTkBfmw" type="4001" element="_laI_4CKnEea86cFLTkBfmw" source="_41tSoCKlEea86cFLTkBfmw" target="_-4rFMCKmEea86cFLTkBfmw">
+            <children xmi:type="notation:Node" xmi:id="_laassCKnEea86cFLTkBfmw" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_laassSKnEea86cFLTkBfmw" x="5" y="-7"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_laassiKnEea86cFLTkBfmw" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_laassyKnEea86cFLTkBfmw" y="11"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_laastCKnEea86cFLTkBfmw" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_laastSKnEea86cFLTkBfmw" y="12"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_laaFoSKnEea86cFLTkBfmw"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_laaFoiKnEea86cFLTkBfmw" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_laaFoyKnEea86cFLTkBfmw" points="[38, 8, 161, 4]$[-116, 4, 7, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_laastiKnEea86cFLTkBfmw" id="(0.0,0.45)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_laastyKnEea86cFLTkBfmw" id="(0.890625,0.53125)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_sqPT8CKoEea86cFLTkBfmw" type="4001" element="_spg7MCKoEea86cFLTkBfmw" source="_41tSoCKlEea86cFLTkBfmw" target="_p0KUICKnEea86cFLTkBfmw">
+            <children xmi:type="notation:Node" xmi:id="_sqPT9CKoEea86cFLTkBfmw" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sqPT9SKoEea86cFLTkBfmw" x="7" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_sqPT9iKoEea86cFLTkBfmw" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sqPT9yKoEea86cFLTkBfmw" x="-5" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_sqPT-CKoEea86cFLTkBfmw" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sqPT-SKoEea86cFLTkBfmw" x="21" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_sqPT8SKoEea86cFLTkBfmw" routing="Tree"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_sqPT8iKoEea86cFLTkBfmw" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sqPT8yKoEea86cFLTkBfmw" points="[-1, 32, -160, -1]$[-1, 32, -160, -1]$[150, 32, -9, -1]$[150, 32, -9, -1]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sqP7ACKoEea86cFLTkBfmw" id="(1.0,0.55)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sqP7ASKoEea86cFLTkBfmw" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_yK11wCKoEea86cFLTkBfmw" type="4001" element="_yKf3gCKoEea86cFLTkBfmw" source="_xS9dcCKmEea86cFLTkBfmw" target="_tpNdoCKoEea86cFLTkBfmw">
+            <children xmi:type="notation:Node" xmi:id="_yK11xCKoEea86cFLTkBfmw" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yK11xSKoEea86cFLTkBfmw" x="25" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_yK2c0CKoEea86cFLTkBfmw" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yK2c0SKoEea86cFLTkBfmw" x="27" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_yK2c0iKoEea86cFLTkBfmw" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yK2c0yKoEea86cFLTkBfmw" x="-9" y="-10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_yK11wSKoEea86cFLTkBfmw" routing="Tree"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_yK11wiKoEea86cFLTkBfmw" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yK11wyKoEea86cFLTkBfmw" points="[37, 19, 178, 27]$[37, 19, 178, 27]$[-142, 19, -1, 27]$[-142, 7, -1, 15]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yK2c1CKoEea86cFLTkBfmw" id="(0.0,0.39166666666666666)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_piJ7ICLIEeat_7ESuleHQw" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="__3fL8CKoEea86cFLTkBfmw" type="4001" element="__21EoCKoEea86cFLTkBfmw" source="_G18dwCKnEea86cFLTkBfmw" target="_10uGgCKoEea86cFLTkBfmw">
+            <children xmi:type="notation:Node" xmi:id="__3fL9CKoEea86cFLTkBfmw" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__3fL9SKoEea86cFLTkBfmw" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__3fL9iKoEea86cFLTkBfmw" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__3fL9yKoEea86cFLTkBfmw" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__3fL-CKoEea86cFLTkBfmw" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__3fL-SKoEea86cFLTkBfmw" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="__3fL8SKoEea86cFLTkBfmw" routing="Tree"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="__3fL8iKoEea86cFLTkBfmw" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__3fL8yKoEea86cFLTkBfmw" points="[0, 0, -114, -64]$[114, 64, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__3fL-iKoEea86cFLTkBfmw" id="(0.484375,0.875)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__3fL-yKoEea86cFLTkBfmw" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_uD8cYCKpEea86cFLTkBfmw" type="4001" element="_uDphcCKpEea86cFLTkBfmw" source="_XylTICKpEea86cFLTkBfmw" target="_qBG5ECKpEea86cFLTkBfmw">
+            <children xmi:type="notation:Node" xmi:id="_uD9DcCKpEea86cFLTkBfmw" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uD9DcSKpEea86cFLTkBfmw" x="4" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_uD9qgCKpEea86cFLTkBfmw" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uD9qgSKpEea86cFLTkBfmw" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_uD9qgiKpEea86cFLTkBfmw" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uD9qgyKpEea86cFLTkBfmw" x="4" y="6"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_uD8cYSKpEea86cFLTkBfmw" routing="Tree"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_uD8cYiKpEea86cFLTkBfmw" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_uD8cYyKpEea86cFLTkBfmw" points="[0, 24, -72, -58]$[0, 60, -72, -22]$[72, 60, 0, -22]$[72, 73, 0, -9]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uD9qhCKpEea86cFLTkBfmw" id="(0.515625,0.921875)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uD9qhSKpEea86cFLTkBfmw" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_jbLKECKtEeaZxuZdzmvcnA" type="4001" element="_jZ4woCKtEeaZxuZdzmvcnA" source="_xS9dcCKmEea86cFLTkBfmw" target="_h0tikCKtEeaZxuZdzmvcnA">
+            <children xmi:type="notation:Node" xmi:id="_jbMYMCKtEeaZxuZdzmvcnA" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jbMYMSKtEeaZxuZdzmvcnA" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_jbM_QCKtEeaZxuZdzmvcnA" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jbM_QSKtEeaZxuZdzmvcnA" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_jbNmUCKtEeaZxuZdzmvcnA" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jbNmUSKtEeaZxuZdzmvcnA" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_jbLKESKtEeaZxuZdzmvcnA" routing="Tree"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_jbLKEiKtEeaZxuZdzmvcnA" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_jbLKEyKtEeaZxuZdzmvcnA" points="[60, -41, -51, 34]$[111, -75, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jbONYCKtEeaZxuZdzmvcnA" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jbONYSKtEeaZxuZdzmvcnA" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_kOCKYCKtEeaZxuZdzmvcnA" type="4001" element="_kNpI0CKtEeaZxuZdzmvcnA" source="_41tSoCKlEea86cFLTkBfmw" target="_hX5DsCKtEeaZxuZdzmvcnA">
+            <children xmi:type="notation:Node" xmi:id="_kOCKZCKtEeaZxuZdzmvcnA" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kOCKZSKtEeaZxuZdzmvcnA" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_kOCKZiKtEeaZxuZdzmvcnA" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kOCKZyKtEeaZxuZdzmvcnA" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_kOCKaCKtEeaZxuZdzmvcnA" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kOCKaSKtEeaZxuZdzmvcnA" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_kOCKYSKtEeaZxuZdzmvcnA" routing="Tree"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_kOCKYiKtEeaZxuZdzmvcnA" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kOCKYyKtEeaZxuZdzmvcnA" points="[60, -41, -51, 34]$[111, -75, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kOCKaiKtEeaZxuZdzmvcnA" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kOCKayKtEeaZxuZdzmvcnA" id="(0.5,0.5)"/>
+          </edges>
+        </data>
+      </ownedAnnotationEntries>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_40t0ICKlEea86cFLTkBfmw" name="Miner" outgoingEdges="_laI_4CKnEea86cFLTkBfmw _spg7MCKoEea86cFLTkBfmw _kNpI0CKtEeaZxuZdzmvcnA" width="-1" height="-1" resizeKind="NSEW">
+        <target xmi:type="drones:Drone" href="starcraft.drones#Miner"/>
+        <semanticElements xmi:type="drones:Drone" href="starcraft.drones#Miner"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_40-S0CKlEea86cFLTkBfmw" labelSize="11" labelAlignment="RIGHT" workspacePath="/hu.bme.mit.mdsd.dns2016.drones.design/img/quadcopter-icon_2x.png">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='droneNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='droneNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_xS4k8CKmEea86cFLTkBfmw" name="Guard" outgoingEdges="_ir20sCKnEea86cFLTkBfmw _yKf3gCKoEea86cFLTkBfmw _jZ4woCKtEeaZxuZdzmvcnA" width="-1" height="-1" resizeKind="NSEW">
+        <target xmi:type="drones:Drone" href="starcraft.drones#Guard"/>
+        <semanticElements xmi:type="drones:Drone" href="starcraft.drones#Guard"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_xS5MACKmEea86cFLTkBfmw" labelSize="11" labelAlignment="RIGHT" workspacePath="/hu.bme.mit.mdsd.dns2016.drones.design/img/quadcopter-icon_2x.png">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='droneNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='droneNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_-4DaICKmEea86cFLTkBfmw" name="Miner_Station" incomingEdges="_laI_4CKnEea86cFLTkBfmw" width="-1" height="-1">
+        <target xmi:type="drones:ChargeStation" href="starcraft.drones#Miner_Station"/>
+        <semanticElements xmi:type="drones:ChargeStation" href="starcraft.drones#Miner_Station"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_-4HrkCKmEea86cFLTkBfmw" labelSize="10" showIcon="false" workspacePath="/hu.bme.mit.mdsd.dns2016.drones.design/img/plug-silhouette_318-75149 copy.jpeg">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='chargeStationNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='chargeStationNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_B-owkCKnEea86cFLTkBfmw" name="Guard_Station" incomingEdges="_ir20sCKnEea86cFLTkBfmw" width="-1" height="-1">
+        <target xmi:type="drones:ChargeStation" href="starcraft.drones#Guard_Station"/>
+        <semanticElements xmi:type="drones:ChargeStation" href="starcraft.drones#Guard_Station"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_B-pXoCKnEea86cFLTkBfmw" labelSize="10" showIcon="false" workspacePath="/hu.bme.mit.mdsd.dns2016.drones.design/img/plug-silhouette_318-75149 copy.jpeg">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='chargeStationNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='chargeStationNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_G1Nd8CKnEea86cFLTkBfmw" name="Mineral_Field" outgoingEdges="__21EoCKoEea86cFLTkBfmw" width="-1" height="-1" resizeKind="NSEW">
+        <target xmi:type="drones:ImmovableObject" href="starcraft.drones#Mineral_Field"/>
+        <semanticElements xmi:type="drones:ImmovableObject" href="starcraft.drones#Mineral_Field"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_G1S9gCKnEea86cFLTkBfmw" labelSize="15" iconPath="/hu.bme.mit.mdsd.dns2016.drones.design/img/lock.png" workspacePath="/hu.bme.mit.mdsd.dns2016.drones.design/img/Shopping box 2.png">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='fieldObjectNodeImmovable']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='fieldObjectNodeImmovable']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_XyWCkCKpEea86cFLTkBfmw" name="Base_Entrance" outgoingEdges="_uDphcCKpEea86cFLTkBfmw" width="-1" height="-1" resizeKind="NSEW">
+        <target xmi:type="drones:ImmovableObject" href="starcraft.drones#Base_Entrance"/>
+        <semanticElements xmi:type="drones:ImmovableObject" href="starcraft.drones#Base_Entrance"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_XyWpoCKpEea86cFLTkBfmw" labelSize="15" iconPath="/hu.bme.mit.mdsd.dns2016.drones.design/img/lock.png" workspacePath="/hu.bme.mit.mdsd.dns2016.drones.design/img/Shopping box 2.png">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='fieldObjectNodeImmovable']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='fieldObjectNodeImmovable']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_9LN_sCK4EeaEVezlAIB2iw" name="Command_Center" width="-1" height="-1" resizeKind="NSEW">
+        <target xmi:type="drones:ImmovableObject" href="starcraft.drones#Command_Center"/>
+        <semanticElements xmi:type="drones:ImmovableObject" href="starcraft.drones#Command_Center"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_9LOmwCK4EeaEVezlAIB2iw" labelSize="15" iconPath="/hu.bme.mit.mdsd.dns2016.drones.design/img/lock.png" workspacePath="/hu.bme.mit.mdsd.dns2016.drones.design/img/Shopping box 2.png">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='fieldObjectNodeImmovable']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='fieldObjectNodeImmovable']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_ir20sCKnEea86cFLTkBfmw" sourceNode="_xS4k8CKmEea86cFLTkBfmw" targetNode="_B-owkCKnEea86cFLTkBfmw">
+        <target xmi:type="drones:Drone" href="starcraft.drones#Guard"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_ir6fECKnEea86cFLTkBfmw" lineStyle="dot" targetArrow="OutputClosedArrow" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@edgeMappings[name='droneChargeStationRelationEdge']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_ir6fESKnEea86cFLTkBfmw"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@edgeMappings[name='droneChargeStationRelationEdge']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_laI_4CKnEea86cFLTkBfmw" sourceNode="_40t0ICKlEea86cFLTkBfmw" targetNode="_-4DaICKmEea86cFLTkBfmw">
+        <target xmi:type="drones:Drone" href="starcraft.drones#Miner"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_laJm8CKnEea86cFLTkBfmw" lineStyle="dot" targetArrow="OutputClosedArrow" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@edgeMappings[name='droneChargeStationRelationEdge']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_laJm8SKnEea86cFLTkBfmw"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@edgeMappings[name='droneChargeStationRelationEdge']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_pzVNsCKnEea86cFLTkBfmw" name="Mine" tooltipText="Action details&#xA;Mineral_Count -= 5" incomingEdges="_spg7MCKoEea86cFLTkBfmw" width="3" height="3">
+        <target xmi:type="drones:Action" href="starcraft.drones#Mine"/>
+        <semanticElements xmi:type="drones:Action" href="starcraft.drones#Mine"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Lozenge" xmi:id="_pzkeQCKnEea86cFLTkBfmw" labelSize="10" showIcon="false" labelAlignment="RIGHT" color="204,242,166">
+          <labelFormat>italic</labelFormat>
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@nodeMappings[name='actionNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@nodeMappings[name='actionNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_tpGI4CKoEea86cFLTkBfmw" name="Fire" tooltipText="Action details&#xA;Enemy_Count -= 1" incomingEdges="_yKf3gCKoEea86cFLTkBfmw" width="3" height="3">
+        <target xmi:type="drones:Action" href="starcraft.drones#Fire"/>
+        <semanticElements xmi:type="drones:Action" href="starcraft.drones#Fire"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Lozenge" xmi:id="_tpGI4SKoEea86cFLTkBfmw" labelSize="10" showIcon="false" labelAlignment="RIGHT" color="204,242,166">
+          <labelFormat>italic</labelFormat>
+          <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@nodeMappings[name='actionNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@nodeMappings[name='actionNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_spg7MCKoEea86cFLTkBfmw" sourceNode="_40t0ICKlEea86cFLTkBfmw" targetNode="_pzVNsCKnEea86cFLTkBfmw">
+        <target xmi:type="drones:Drone" href="starcraft.drones#Miner"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_sphiQCKoEea86cFLTkBfmw" targetArrow="NoDecoration" foldingStyle="SOURCE" size="2" routingStyle="tree">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@edgeMappings[name='actionsOfDronesRelation']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_sphiQSKoEea86cFLTkBfmw"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@edgeMappings[name='actionsOfDronesRelation']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_yKf3gCKoEea86cFLTkBfmw" sourceNode="_xS4k8CKmEea86cFLTkBfmw" targetNode="_tpGI4CKoEea86cFLTkBfmw">
+        <target xmi:type="drones:Drone" href="starcraft.drones#Guard"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_yKf3gSKoEea86cFLTkBfmw" targetArrow="NoDecoration" foldingStyle="SOURCE" size="2" routingStyle="tree">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@edgeMappings[name='actionsOfDronesRelation']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_yKf3giKoEea86cFLTkBfmw"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@edgeMappings[name='actionsOfDronesRelation']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_1z5AECKoEea86cFLTkBfmw" name="Mineral_Count=20" incomingEdges="__21EoCKoEea86cFLTkBfmw" width="2" height="2">
+        <target xmi:type="drones:Parameter" href="starcraft.drones#//@fieldObjects.2/@parameters.0"/>
+        <semanticElements xmi:type="drones:Parameter" href="starcraft.drones#//@fieldObjects.2/@parameters.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_1z94kCKoEea86cFLTkBfmw" labelSize="10" showIcon="false" labelAlignment="RIGHT" shape="triangle">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:BundledImageDescription" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@nodeMappings[name='parameterNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@nodeMappings[name='parameterNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_qBALYCKpEea86cFLTkBfmw" name="Enemy_Count=10" incomingEdges="_uDphcCKpEea86cFLTkBfmw" width="2" height="2">
+        <target xmi:type="drones:Parameter" href="starcraft.drones#//@fieldObjects.3/@parameters.0"/>
+        <semanticElements xmi:type="drones:Parameter" href="starcraft.drones#//@fieldObjects.3/@parameters.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_qBALYSKpEea86cFLTkBfmw" labelSize="10" showIcon="false" labelAlignment="RIGHT" shape="triangle">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:BundledImageDescription" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@nodeMappings[name='parameterNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@nodeMappings[name='parameterNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="__21EoCKoEea86cFLTkBfmw" sourceNode="_G1Nd8CKnEea86cFLTkBfmw" targetNode="_1z5AECKoEea86cFLTkBfmw">
+        <target xmi:type="drones:ImmovableObject" href="starcraft.drones#Mineral_Field"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="__21rsCKoEea86cFLTkBfmw" lineStyle="dash" targetArrow="NoDecoration" foldingStyle="SOURCE" size="2" routingStyle="tree">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@edgeMappings[name='parametersOfFieldObjectsRelation']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="__21rsSKoEea86cFLTkBfmw"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@edgeMappings[name='parametersOfFieldObjectsRelation']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_uDphcCKpEea86cFLTkBfmw" sourceNode="_XyWCkCKpEea86cFLTkBfmw" targetNode="_qBALYCKpEea86cFLTkBfmw">
+        <target xmi:type="drones:ImmovableObject" href="starcraft.drones#Base_Entrance"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_uDphcSKpEea86cFLTkBfmw" lineStyle="dash" targetArrow="NoDecoration" foldingStyle="SOURCE" size="2" routingStyle="tree">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@edgeMappings[name='parametersOfFieldObjectsRelation']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_uDphciKpEea86cFLTkBfmw"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@edgeMappings[name='parametersOfFieldObjectsRelation']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_hVwVsCKtEeaZxuZdzmvcnA" name="100.0%" incomingEdges="_kNpI0CKtEeaZxuZdzmvcnA" width="-1" height="-1">
+        <target xmi:type="drones:Battery" href="starcraft.drones#//@drones.0/@battery"/>
+        <semanticElements xmi:type="drones:Battery" href="starcraft.drones#//@drones.0/@battery"/>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_hWR6ICKtEeaZxuZdzmvcnA" showIcon="false" workspacePath="/hu.bme.mit.mdsd.dns2016.drones.design/img/battery_high.jpg">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='batteryNode']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='batteryNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_h0SEwCKtEeaZxuZdzmvcnA" name="100.0%" incomingEdges="_jZ4woCKtEeaZxuZdzmvcnA" width="-1" height="-1">
+        <target xmi:type="drones:Battery" href="starcraft.drones#//@drones.1/@battery"/>
+        <semanticElements xmi:type="drones:Battery" href="starcraft.drones#//@drones.1/@battery"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_pjxgACKtEeaZxuZdzmvcnA" showIcon="false" workspacePath="/hu.bme.mit.mdsd.dns2016.drones.design/img/battery_high.jpg">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='batteryNode']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='batteryNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_jZ4woCKtEeaZxuZdzmvcnA" sourceNode="_xS4k8CKmEea86cFLTkBfmw" targetNode="_h0SEwCKtEeaZxuZdzmvcnA">
+        <target xmi:type="drones:Drone" href="starcraft.drones#Guard"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_jZ4woSKtEeaZxuZdzmvcnA" targetArrow="OutputFillClosedArrow" foldingStyle="SOURCE" size="2" routingStyle="tree" centered="Source" strokeColor="209,209,209">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@edgeMappings[name='droneHasBatteryRelationEdge']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_jZ4woiKtEeaZxuZdzmvcnA"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@edgeMappings[name='droneHasBatteryRelationEdge']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_kNpI0CKtEeaZxuZdzmvcnA" sourceNode="_40t0ICKlEea86cFLTkBfmw" targetNode="_hVwVsCKtEeaZxuZdzmvcnA">
+        <target xmi:type="drones:Drone" href="starcraft.drones#Miner"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_kNpv4CKtEeaZxuZdzmvcnA" targetArrow="OutputFillClosedArrow" foldingStyle="SOURCE" size="2" routingStyle="tree" centered="Source" strokeColor="209,209,209">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@edgeMappings[name='droneHasBatteryRelationEdge']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_kNpv4SKtEeaZxuZdzmvcnA"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@edgeMappings[name='droneHasBatteryRelationEdge']"/>
+      </ownedDiagramElements>
+      <description xmi:type="description_1:DiagramDescription" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']"/>
+      <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_2F-V8iKlEea86cFLTkBfmw"/>
+      <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer"/>
+      <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']"/>
+      <target xmi:type="drones:Mission" href="starcraft.drones#Mining_Mission"/>
+    </ownedRepresentations>
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/hu.bme.mit.mdsd.dns2016.drones.design/description/drones.odesign#//@ownedViewpoints[name='drones']"/>
+  </ownedViews>
+</viewpoint:DAnalysis>

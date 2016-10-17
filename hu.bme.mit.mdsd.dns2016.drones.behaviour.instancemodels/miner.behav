@@ -1,0 +1,15 @@
+import "platform:/resource/hu.bme.mit.mdsd.dns2016.drones.behaviour.instancemodels/starcraft.drones"
+
+behav MinerBehav (interrupt = true);
+
+drones { Miner }
+
+// While there are still minerals left to mine
+while (Mineral_Field.Mineral_Count > 0) {
+	// Move to the mineral field, mine, then go back to the command center
+	moveto Mineral_Field;
+	action Mine on Mineral_Field;
+	moveto Command_Center;
+}
+
+moveto Miner_Station;

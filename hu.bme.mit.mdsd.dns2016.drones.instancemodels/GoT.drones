@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<drones:Mission xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:drones="hu.bme.mit.mdsd.dns2016.drones" name="Sacrifice">
+  <fieldObjects xsi:type="drones:MovableObject" name="Door" length="10.0" height="5.0" width="3.5" x="24.3" y="0.15" z="42.1" weight="100.0">
+    <parameters key="ZombieCount" value="1000"/>
+  </fieldObjects>
+  <fieldObjects xsi:type="drones:MovableObject" name="Bran_Stark"/>
+  <fieldObjects xsi:type="drones:ChargeStation" name="The_Wall" length="2.0" height="2.0" width="2.0" x="107.2" z="3.0"/>
+  <drones name="HODOR" chargeStation="The_Wall" supportedActions="KillZombie">
+    <battery/>
+  </drones>
+  <drones name="That_Girl" chargeStation="The_Wall">
+    <battery/>
+  </drones>
+  <actions name="KillZombie" operation="SUBTRACT" key="ZombieCount" value="1" range="2.0"/>
+</drones:Mission>

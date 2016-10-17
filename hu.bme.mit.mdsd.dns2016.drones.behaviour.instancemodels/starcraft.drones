@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<drones:Mission xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:drones="hu.bme.mit.mdsd.dns2016.drones" name="Mining_Mission">
+  <fieldObjects xsi:type="drones:ChargeStation" name="Miner_Station"/>
+  <fieldObjects xsi:type="drones:ChargeStation" name="Guard_Station" x="5.0"/>
+  <fieldObjects xsi:type="drones:ImmovableObject" name="Mineral_Field" x="2.0" y="20.0">
+    <parameters key="Mineral_Count" value="20"/>
+  </fieldObjects>
+  <fieldObjects xsi:type="drones:ImmovableObject" name="Base_Entrance" x="6.0" y="25.0">
+    <parameters key="Enemy_Count" value="10"/>
+  </fieldObjects>
+  <fieldObjects xsi:type="drones:ImmovableObject" name="Command_Center" length="1.0" height="1.0" width="1.0" x="3.0" y="-2.0"/>
+  <drones name="Miner" length="0.5" height="0.5" width="0.5" chargeStation="Miner_Station" cpuFrequency="3000" memory="8" maxPayload="5.0" communicationRange="10.0" maxSpeed="10.0" supportedActions="Mine">
+    <battery lifeTime="500.0" remainingLifeTime="500.0"/>
+  </drones>
+  <drones name="Guard" length="0.5" height="0.5" width="0.5" x="5.0" chargeStation="Guard_Station" maxPayload="3.0" communicationRange="20.0" minSpeed="10.0" supportedActions="Fire">
+    <battery lifeTime="300.0" remainingLifeTime="300.0"/>
+  </drones>
+  <actions name="Mine" operation="SUBTRACT" key="Mineral_Count" value="5" range="2.0"/>
+  <actions name="Fire" operation="SUBTRACT" key="Enemy_Count" value="1" range="2.0"/>
+</drones:Mission>

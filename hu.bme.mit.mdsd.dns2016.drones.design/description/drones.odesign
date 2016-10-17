@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:validation="http://www.eclipse.org/sirius/description/validation/1.1.0" name="drones" version="10.1.3.201511131800">
+  <ownedViewpoints name="drones" label="Drone Mission Diagram">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="drones" label="Drone Mission Diagram" domainClass="Mission" enablePopupBars="true">
+      <validationSet name="Drone Mission Validation">
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="noTemporalObjectsRule" message="[temporalObjects->size().toString() + 'element(s) are not connected properly: ' + temporalObjects->toString() /]" targetClass="Mission">
+          <audits auditExpression="[temporalObjects->size() = 0/]"/>
+          <fixes name="Delete all temporal objects">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Unset" featureName="temporalObjects" elementExpression="[thisEObject.temporalObjects/]"/>
+            </initialOperation>
+          </fixes>
+        </ownedRules>
+      </validationSet>
+      <defaultLayer name="Default">
+        <nodeMappings name="droneNode" label="Drone" deletionDescription="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@toolSections.0/@ownedTools[name='deleteDrone']" labelDirectEdit="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@toolSections.0/@ownedTools[name='renameWhatever']" domainClass="Drone">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="11" labelExpression="[name/]" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/hu.bme.mit.mdsd.dns2016.drones.design/img/quadcopter-icon_2x.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="fieldObjectNodeImmovable" label="Field Object (Immovable)" preconditionExpression="[not(eClass().name = 'ChargeStation')/]" deletionDescription="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@toolSections.0/@ownedTools[name='deleteImmovableObject']" labelDirectEdit="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@toolSections.0/@ownedTools[name='renameWhatever']" domainClass="ImmovableObject">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="15" labelExpression="[name/]" iconPath="/hu.bme.mit.mdsd.dns2016.drones.design/img/lock.png" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/hu.bme.mit.mdsd.dns2016.drones.design/img/Shopping box 2.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="chargeStationNode" label="Charge Station" preconditionExpression="[eClass().name = 'ChargeStation'/]" deletionDescription="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@toolSections.0/@ownedTools[name='deleteImmovableObject']" labelDirectEdit="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@toolSections.0/@ownedTools[name='renameWhatever']" domainClass="ChargeStation">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="10" showIcon="false" labelExpression="[name/]" sizeComputationExpression="-1" workspacePath="/hu.bme.mit.mdsd.dns2016.drones.design/img/plug-silhouette_318-75149 copy.jpeg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="fieldObjectNodeMovable" label="Field Object (Movable)" preconditionExpression="[eClass().name = 'MovableObject'/]" deletionDescription="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@toolSections.0/@ownedTools[name='deleteMovableObject']" labelDirectEdit="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@toolSections.0/@ownedTools[name='renameWhatever']" domainClass="MovableObject">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="15" showIcon="false" labelExpression="[name/]" sizeComputationExpression="-1" workspacePath="/hu.bme.mit.mdsd.dns2016.drones.design/img/Shopping box 2.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="batteryNode" label="Battery" labelDirectEdit="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@toolSections.0/@ownedTools[name='renameWhatever']" domainClass="Battery">
+          <conditionnalStyles predicateExpression="[(charge/100) >= 0.75/]">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="[charge.toString() + '%'/]" sizeComputationExpression="-1" workspacePath="/hu.bme.mit.mdsd.dns2016.drones.design/img/battery_high.jpg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[(charge/100) >= 0.25 and (charge/100) &lt;= 0.75/]">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="[charge.toString() + '%'/]" sizeComputationExpression="-1" workspacePath="/hu.bme.mit.mdsd.dns2016.drones.design/img/battery_mid.jpg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[(charge/100) &lt;= 0.25/]">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="[charge.toString() + '%'/]" sizeComputationExpression="-1" workspacePath="/hu.bme.mit.mdsd.dns2016.drones.design/img/battery_low.jpg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <edgeMappings name="droneHasBatteryRelationEdge" label="Battery Ownership Based Edge" deletionDescription="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@toolSections.1/@ownedTools[name='deleteBatteryOwnership']" sourceMapping="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='droneNode']" targetMapping="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='batteryNode']" targetFinderExpression="[battery/]">
+          <style targetArrow="OutputFillClosedArrow" sizeComputationExpression="2" routingStyle="tree" foldingStyle="SOURCE" endsCentering="Source">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="droneChargeStationRelationEdge" label="Drone Charge Station Based Edge" deletionDescription="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@toolSections.1/@ownedTools[name='deleteChargeStationRelation']" sourceMapping="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='droneNode']" targetMapping="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='chargeStationNode']" targetFinderExpression="[chargeStation/]">
+          <style lineStyle="dot" targetArrow="OutputClosedArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="genericTools" label="Create Elements">
+          <ownedTools xsi:type="tool_1:DeleteElementDescription" name="deleteDrone" label="Drone">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element.ancestors()->last()/]">
+                <subModelOperations xsi:type="tool:If" conditionExpression="[element.battery->isEmpty()._not()/]">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="temporalObjects" valueExpression="[element.battery/]"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="[element.supportedActions->isEmpty()._not()/]">
+                  <subModelOperations xsi:type="tool:For" expression="[element.supportedActions/]">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="[element/]">
+                      <subModelOperations xsi:type="tool:Unset" featureName="supportedActions" elementExpression="[i/]">
+                        <subModelOperations xsi:type="tool:If" conditionExpression="[Drone.allInstances().supportedActions->excludes(i)/]">
+                          <subModelOperations xsi:type="tool:ChangeContext" browseExpression="[element.ancestors()->last()/]">
+                            <subModelOperations xsi:type="tool:SetValue" featureName="temporalObjects" valueExpression="[i/]"/>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="[element/]">
+                  <subModelOperations xsi:type="tool:RemoveElement"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:DeleteElementDescription" name="deleteImmovableObject" label="Immovable Object">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element.ancestors()->last()/]">
+                <subModelOperations xsi:type="tool:If" conditionExpression="[element.parameters->isEmpty()._not()/]">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="temporalObjects" valueExpression="[element.parameters/]"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="[element/]">
+                  <subModelOperations xsi:type="tool:RemoveElement"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:DeleteElementDescription" name="deleteMovableObject" label="Movable Object">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element.ancestors()->last()/]">
+                <subModelOperations xsi:type="tool:If" conditionExpression="[element.parameters->isEmpty()._not()/]">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="temporalObjects" valueExpression="[element.parameters/]"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="[element/]">
+                  <subModelOperations xsi:type="tool:RemoveElement"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:DirectEditLabel" name="renameWhatever" label="Rename">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:arg0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="droneNodeCreation" label="Drone" nodeMappings="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='droneNode']" iconPath="/hu.bme.mit.mdsd.dns2016.drones.design/img/quadcopter-icon_2x_small.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="Drone" referenceName="drones">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="var:instance">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="['Unnamed_Drone_' + (container.drones->size()).toString()/]"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="movableNodeCreation" label="Movable Object" nodeMappings="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='fieldObjectNodeMovable']" iconPath="/hu.bme.mit.mdsd.dns2016.drones.design/img/Shopping_box_2_small.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="MovableObject" referenceName="fieldObjects">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="var:instance">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="['Unnamed_Movable_Object_' + (container.fieldObjects->filter(MovableObject)->size()).toString()/]"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="immovableNodeCreation" label="Immovable Object" nodeMappings="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='fieldObjectNodeImmovable']" iconPath="/hu.bme.mit.mdsd.dns2016.drones.design/img/Shopping_box_2_small.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="ImmovableObject" referenceName="fieldObjects">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="var:instance">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="['Unnamed_Immovable_Object_' + (container.fieldObjects->filter(ImmovableObject)->size() - container.fieldObjects->filter(ChargeStation)->size()).toString()/]"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="batteryCreation" label="Battery" nodeMappings="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='batteryNode']" iconPath="/hu.bme.mit.mdsd.dns2016.drones.design/img/battery_high_small.jpg">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="Battery" referenceName="temporalObjects">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="var:instance">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Battery"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="chargeStationCreation" label="Charge Station" nodeMappings="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='chargeStationNode']" iconPath="/hu.bme.mit.mdsd.dns2016.drones.design/img/plug-silhouette_318-75149_small.jpeg">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="ChargeStation" referenceName="fieldObjects">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="var:instance">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="['Charge_Station_' + (container.fieldObjects->filter(ChargeStation)->size()).toString()/]"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="connectivityTools" label="Drone Relations">
+          <ownedTools xsi:type="tool_1:DeleteElementDescription" name="deleteBatteryOwnership" label="Battery Ownership">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element.ancestors()->last()/]">
+                <subModelOperations xsi:type="tool:SetValue" featureName="temporalObjects" valueExpression="[elementView.oclAsType(DEdge).targetNode.oclAsType(DNode).target/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:DeleteElementDescription" name="deleteChargeStationRelation" label="Charge Station Relation">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool:Unset" featureName="chargeStation" elementExpression="[elementView.oclAsType(DEdge).targetNode.oclAsType(DNode).target/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:EdgeCreationDescription" name="batteryOwnershipBasedRelationCreation" label="Battery" precondition="[preTarget.oclIsTypeOf(Battery)/]" edgeMappings="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@edgeMappings[name='droneHasBatteryRelationEdge']" connectionStartPrecondition="[preSource.oclIsTypeOf(Drone)/]">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Switch">
+                <cases conditionExpression="[source.battery.oclIsUndefined()._not()/]">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="[source.ancestors()->last()/]">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="temporalObjects" valueExpression="[source.battery/]">
+                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="var:source">
+                        <subModelOperations xsi:type="tool:SetValue" featureName="battery" valueExpression="var:target"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </cases>
+                <default>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="battery" valueExpression="var:target"/>
+                </default>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:EdgeCreationDescription" name="droneChargeStationRelationEdge" label="Charge Station" precondition="[preTarget.oclIsTypeOf(ChargeStation)/]" edgeMappings="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@edgeMappings[name='droneChargeStationRelationEdge']" connectionStartPrecondition="[preSource.oclIsTypeOf(Drone)/]">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="chargeStation" valueExpression="var:target"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+      <additionalLayers name="parametersLayer" label="Actions and Parameters" activeByDefault="true">
+        <nodeMappings name="actionNode" label="Action" labelDirectEdit="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@toolSections.0/@ownedTools[name='renameWhateverInMetadataLayer']" domainClass="drones.Action">
+          <style xsi:type="style:LozengeNodeDescription" labelSize="10" showIcon="false" labelExpression="[name/]" labelAlignment="RIGHT" tooltipExpression="['Action details\n' + key.toString() + if self.operation = ActionKind::SET then ' == ' else if self.operation = ActionKind::ADD then ' += ' else if self.operation = ActionKind::SUBTRACT then ' -= ' else ' ? ' endif endif endif + value.toString()/]">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>italic</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="parameterNode" label="Parameter" labelDirectEdit="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@toolSections.0/@ownedTools[name='renameWhateverInMetadataLayer']" domainClass="Parameter">
+          <style xsi:type="style:BundledImageDescription" labelSize="10" showIcon="false" labelExpression="[key + '=' + value.toString()/]" labelAlignment="RIGHT" sizeComputationExpression="2" shape="triangle">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="parametersOfFieldObjectsRelation" label="Parameter Ownership Based Relation" deletionDescription="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@toolSections.1/@ownedTools[name='deleteParameterOwnership']" sourceMapping="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='fieldObjectNodeImmovable'] //@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='fieldObjectNodeMovable'] //@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='chargeStationNode']" targetMapping="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@nodeMappings[name='parameterNode']" targetFinderExpression="[parameters/]">
+          <style lineStyle="dash" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="tree" foldingStyle="SOURCE">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="actionsOfDronesRelation" label="Drone Action Relation" deletionDescription="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@toolSections.1/@ownedTools[name='deleteDroneActionRelation']" sourceMapping="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@defaultLayer/@nodeMappings[name='droneNode']" targetMapping="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@nodeMappings[name='actionNode']" targetFinderExpression="[supportedActions/]">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="tree" foldingStyle="SOURCE">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="genericActionTools" label="Create">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="actionNodeCreation" label="Action" nodeMappings="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@nodeMappings[name='actionNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="drones.Action" referenceName="temporalObjects">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="instance">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="['Untitled_Action_' + (container.actions->size()).toString()/]"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="parameterNodeCreation" label="Parameter" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@nodeMappings[name='parameterNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="drones.Parameter" referenceName="temporalObjects">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="instance">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="key" valueExpression="['unnamed_parameter_' + (Parameter.allInstances()->size()).toString()/]"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:DirectEditLabel" name="renameWhateverInMetadataLayer" label="Rename">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:arg0"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="genericActionAndParameterRelationsTools" label="Relations">
+          <ownedTools xsi:type="tool_1:EdgeCreationDescription" name="parameterRelationshipCreation" label="Parameter Connection" precondition="[preTarget.oclIsKindOf(Parameter)/]" edgeMappings="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@edgeMappings[name='parametersOfFieldObjectsRelation']" connectionStartPrecondition="[preSource.oclIsKindOf(FieldObject)/]">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="parameters" valueExpression="var:target"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:EdgeCreationDescription" name="actionRelationCreation" label="Drone Action Connection" precondition="[preTarget.oclIsTypeOf(Action)/]" edgeMappings="//@ownedViewpoints[name='drones']/@ownedRepresentations[name='drones']/@additionalLayers[name='parametersLayer']/@edgeMappings[name='actionsOfDronesRelation']" connectionStartPrecondition="[preSource.oclIsTypeOf(Drone)/]">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Switch">
+                <cases conditionExpression="[Mission.allInstances().temporalObjects->includes(target)/]">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="[source.ancestors()->last()/]">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="actions" valueExpression="var:target">
+                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="var:source">
+                        <subModelOperations xsi:type="tool:SetValue" featureName="supportedActions" valueExpression="var:target"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </cases>
+                <default>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="supportedActions" valueExpression="var:target"/>
+                </default>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:DeleteElementDescription" name="deleteParameterOwnership" label="Parameter Ownership">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element.ancestors()->last()/]">
+                <subModelOperations xsi:type="tool:SetValue" featureName="temporalObjects" valueExpression="[elementView.oclAsType(DEdge).targetNode.oclAsType(DNode).target/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:DeleteElementDescription" name="deleteDroneActionRelation" label="Drone Action Relation">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool:Unset" featureName="supportedActions" elementExpression="[elementView.oclAsType(DEdge).targetNode.oclAsType(DNode).target/]">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="[Drone.allInstances().supportedActions->excludes(elementView.oclAsType(DEdge).targetNode.oclAsType(DNode).target)/]">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="[element.ancestors()->last()/]">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="temporalObjects" valueExpression="[elementView.oclAsType(DEdge).targetNode.oclAsType(DNode).target/]"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<behaviour:DroneBehaviour xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:behaviour="hu.bme.mit.mdsd.dns2016.drones.behaviour" xmlns:drones="hu.bme.mit.mdsd.dns2016.drones" name="MinerBehav" canBeInterrupted="true">
+  <instructions xsi:type="behaviour:While">
+    <instructions xsi:type="behaviour:MoveTo">
+      <fieldObject xsi:type="drones:ImmovableObject" href="starcraft.drones#Mineral_Field"/>
+    </instructions>
+    <instructions xsi:type="behaviour:PerformAction">
+      <action href="starcraft.drones#Mine"/>
+      <target xsi:type="drones:ImmovableObject" href="starcraft.drones#Mineral_Field"/>
+    </instructions>
+    <instructions xsi:type="behaviour:MoveTo">
+      <fieldObject xsi:type="drones:ImmovableObject" href="starcraft.drones#Command_Center"/>
+    </instructions>
+    <condition operation=">" key="Mineral_Count" value="0">
+      <fieldObject xsi:type="drones:ImmovableObject" href="starcraft.drones#Mineral_Field"/>
+    </condition>
+  </instructions>
+  <instructions xsi:type="behaviour:MoveTo">
+    <fieldObject xsi:type="drones:ChargeStation" href="starcraft.drones#Miner_Station"/>
+  </instructions>
+  <drones href="starcraft.drones#Miner"/>
+</behaviour:DroneBehaviour>

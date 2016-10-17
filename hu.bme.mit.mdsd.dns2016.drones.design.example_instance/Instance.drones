@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<drones:Mission xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:drones="hu.bme.mit.mdsd.dns2016.drones" name="Bridge_Building">
+  <fieldObjects xsi:type="drones:ChargeStation" name="Q1_Home_Station" x="-5.0" z="-5.0"/>
+  <fieldObjects xsi:type="drones:ChargeStation" name="Q2_Home_Station" x="-10.0" z="-10.0"/>
+  <fieldObjects xsi:type="drones:ChargeStation" name="O1_Home_Station" x="-15.0" z="-15.0"/>
+  <fieldObjects xsi:type="drones:MovableObject" name="Block_A1" length="1.0" height="1.0" width="1.0" x="6.5" y="0.5" z="5.5"/>
+  <fieldObjects xsi:type="drones:MovableObject" name="Block_A2" length="1.0" height="1.0" width="1.0" x="8.5" y="0.5" z="5.5"/>
+  <fieldObjects xsi:type="drones:MovableObject" name="Block_B" length="5.0" height="1.0" width="1.0" x="7.5" y="1.5" z="5.5" weight="5.0"/>
+  <fieldObjects xsi:type="drones:ImmovableObject" name="Waiting_Point" length="2.0" width="2.0"/>
+  <fieldObjects xsi:type="drones:ImmovableObject" name="Bridge_Location_X1" x="10.5" y="-1.5" z="10.5"/>
+  <fieldObjects xsi:type="drones:ImmovableObject" name="Bridge_Location_X2" x="14.5" y="-1.5" z="10.5"/>
+  <fieldObjects xsi:type="drones:ImmovableObject" name="Bridge_Location_Y" x="12.5" y="-0.5" z="10.5"/>
+  <drones name="Quadcopter_Q1" length="1.5" height="1.0" width="1.5" x="-5.0" z="-5.0" chargeStation="Q1_Home_Station" supportedActions="Place Grab">
+    <battery/>
+  </drones>
+  <drones name="Quadcopter_Q2" length="1.5" height="1.0" width="1.5" x="-10.0" z="-10.0" chargeStation="Q2_Home_Station" supportedActions="Grab Place">
+    <battery/>
+  </drones>
+  <drones name="Octocopter_O1" length="1.5" height="1.0" width="1.5" x="-15.0" z="-15.0" chargeStation="O1_Home_Station" maxPayload="7.0" supportedActions="Grab Place">
+    <battery/>
+  </drones>
+  <actions name="Grab"/>
+  <actions name="Place"/>
+</drones:Mission>

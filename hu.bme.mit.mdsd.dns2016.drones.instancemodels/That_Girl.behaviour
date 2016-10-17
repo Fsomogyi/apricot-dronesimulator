@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<behaviour:DroneBehaviour xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:behaviour="hu.bme.mit.mdsd.dns2016.drones.behaviour" xmlns:drones="hu.bme.mit.mdsd.dns2016.drones" name="ThatGirl" canBeInterrupted="true">
+  <instructions xsi:type="behaviour:Pause" duration="3.0"/>
+  <instructions xsi:type="behaviour:SendMessage" messageType="Hold_the_door"/>
+  <instructions xsi:type="behaviour:WaitForMessage" type="HODOR" timeout="30.0">
+    <whenArrived xsi:type="behaviour:Lift">
+      <target href="GoT.drones#Bran_Stark"/>
+    </whenArrived>
+    <whenLost xsi:type="behaviour:SendMessage" messageType="MEH"/>
+  </instructions>
+  <instructions xsi:type="behaviour:Instruct">
+    <instructions xsi:type="behaviour:MoveTo">
+      <fieldObject xsi:type="drones:MovableObject" href="GoT.drones#Door"/>
+    </instructions>
+    <instructions xsi:type="behaviour:While">
+      <instructions xsi:type="behaviour:PerformAction">
+        <action href="GoT.drones#KillZombie"/>
+        <target xsi:type="drones:MovableObject" href="GoT.drones#Door"/>
+      </instructions>
+      <condition operation=">" key="ZombieCount" value="0">
+        <fieldObject xsi:type="drones:MovableObject" href="GoT.drones#Door"/>
+      </condition>
+    </instructions>
+    <instructions xsi:type="behaviour:SendMessage" messageType="HODOR"/>
+  </instructions>
+  <instructions xsi:type="behaviour:MoveTo">
+    <fieldObject xsi:type="drones:ChargeStation" href="GoT.drones#The_Wall"/>
+  </instructions>
+  <instructions xsi:type="behaviour:PlaceObject"/>
+  <drones href="GoT.drones#That_Girl"/>
+</behaviour:DroneBehaviour>

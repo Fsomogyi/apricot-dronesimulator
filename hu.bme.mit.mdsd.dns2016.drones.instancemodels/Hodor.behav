@@ -1,0 +1,10 @@
+import "platform:/resource/hu.bme.mit.mdsd.dns2016.drones.instancemodels/GoT.drones"
+
+behav HodorBehav (interrupt = true);
+drones { HODOR }
+
+waitfor Hold_the_door 30.0 {
+	send msg HODOR;
+} timeout {
+	wait 1.0;
+}

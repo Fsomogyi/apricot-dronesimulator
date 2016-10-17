@@ -1,0 +1,27 @@
+import "platform:/resource/hu.bme.mit.mdsd.dns2016.drones.instancemodels/GoT.drones"
+
+behav ThatGirl (interrupt = false);
+drones { That_Girl }
+
+wait 3.0;
+
+send msg Hold_the_door;
+
+waitfor HODOR 30.0 {
+	lift Bran_Stark;
+} timeout {
+	send msg MEH;
+}
+
+send instruct {
+	moveto Door;
+	
+	while (Door.ZombieCount > 0) {
+		action KillZombie on Door;
+	}
+	
+	send msg HODOR;
+}
+
+moveto The_Wall;
+place object;

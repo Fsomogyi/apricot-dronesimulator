@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: hu.bme.mit.mdsd.dns2016.drones.text
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: hu.bme.mit.mdsd.dns2016.drones.text; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: hu.bme.mit.mdsd.dns2016.drones,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: hu.bme.mit.mdsd.dns2016.drones.text.serializer,
+ hu.bme.mit.mdsd.dns2016.drones.text.scoping,
+ hu.bme.mit.mdsd.dns2016.drones.text.generator,
+ hu.bme.mit.mdsd.dns2016.drones.text.parser.antlr,
+ hu.bme.mit.mdsd.dns2016.drones.text.parser.antlr.internal,
+ hu.bme.mit.mdsd.dns2016.drones.text.services,
+ hu.bme.mit.mdsd.dns2016.drones.text,
+ hu.bme.mit.mdsd.dns2016.drones.text.validation,
+ hu.bme.mit.mdsd.dns2016.drones.text.formatting
+Import-Package: org.apache.log4j

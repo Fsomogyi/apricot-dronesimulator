@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<behaviour:DroneBehaviour xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:behaviour="hu.bme.mit.mdsd.dns2016.drones.behaviour" xmlns:drones="hu.bme.mit.mdsd.dns2016.drones" name="GuardBehav" canBeInterrupted="true">
+  <instructions xsi:type="behaviour:MoveTo">
+    <fieldObject xsi:type="drones:ImmovableObject" href="starcraft.drones#Base_Entrance"/>
+  </instructions>
+  <instructions xsi:type="behaviour:While">
+    <instructions xsi:type="behaviour:MoveTo">
+      <fieldObject xsi:type="drones:ImmovableObject" href="starcraft.drones#Base_Entrance"/>
+    </instructions>
+    <instructions xsi:type="behaviour:Choice">
+      <condition operation=">" key="Enemy_Count" value="0">
+        <fieldObject xsi:type="drones:ImmovableObject" href="starcraft.drones#Base_Entrance"/>
+      </condition>
+      <trueBranch xsi:type="behaviour:Instruct">
+        <instructions xsi:type="behaviour:MoveTo">
+          <fieldObject xsi:type="drones:ImmovableObject" href="starcraft.drones#Command_Center"/>
+        </instructions>
+        <instructions xsi:type="behaviour:WaitForMessage" type="SafeToComeOut" timeout="20.0">
+          <whenArrived xsi:type="behaviour:Pause" duration="0.5"/>
+          <whenLost xsi:type="behaviour:Pause" duration="0.5"/>
+        </instructions>
+      </trueBranch>
+      <trueBranch xsi:type="behaviour:While">
+        <instructions xsi:type="behaviour:PerformAction">
+          <action href="starcraft.drones#Fire"/>
+          <target xsi:type="drones:ImmovableObject" href="starcraft.drones#Base_Entrance"/>
+        </instructions>
+        <instructions xsi:type="behaviour:Pause"/>
+        <condition operation=">" key="Enemy_Count" value="0">
+          <fieldObject xsi:type="drones:ImmovableObject" href="starcraft.drones#Base_Entrance"/>
+        </condition>
+      </trueBranch>
+      <trueBranch xsi:type="behaviour:MoveTo">
+        <fieldObject xsi:type="drones:ChargeStation" href="starcraft.drones#Guard_Station"/>
+      </trueBranch>
+      <trueBranch xsi:type="behaviour:Pause" duration="10.0"/>
+    </instructions>
+    <condition operation=">" key="Mineral_Count" value="0">
+      <fieldObject xsi:type="drones:ImmovableObject" href="starcraft.drones#Mineral_Field"/>
+    </condition>
+  </instructions>
+  <instructions xsi:type="behaviour:MoveTo">
+    <fieldObject xsi:type="drones:ChargeStation" href="starcraft.drones#Guard_Station"/>
+  </instructions>
+  <drones href="starcraft.drones#Guard"/>
+</behaviour:DroneBehaviour>

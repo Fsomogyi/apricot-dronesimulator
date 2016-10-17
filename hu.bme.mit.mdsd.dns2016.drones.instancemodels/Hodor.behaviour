@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<behaviour:DroneBehaviour xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:behaviour="hu.bme.mit.mdsd.dns2016.drones.behaviour" name="HodorBehav" canBeInterrupted="true">
+  <instructions xsi:type="behaviour:WaitForMessage" type="Hold_the_door" timeout="30.0">
+    <whenArrived xsi:type="behaviour:SendMessage" messageType="HODOR"/>
+    <whenLost xsi:type="behaviour:Pause"/>
+  </instructions>
+  <drones href="GoT.drones#HODOR"/>
+</behaviour:DroneBehaviour>

@@ -1,0 +1,37 @@
+import "platform:/resource/hu.bme.mit.mdsd.dns2016.drones.behaviour.instancemodels/starcraft.drones"
+
+behav GuardBehav (interrupt = false);
+drones {Guard}
+
+moveto Base_Entrance;
+
+// While there are still minerals left to mine
+while (Mineral_Field.Mineral_Count > 0) {
+	
+	// Move to base entrance and check if there are enemies nearby
+	moveto Base_Entrance;
+	if (Base_Entrance.Enemy_Count > 0) {
+		
+		// Instruct the miners to move to safety
+		send instruct {
+			moveto Command_Center;
+			waitfor SafeToComeOut 20.0 {
+				wait 0.5;
+			} timeout {
+				wait 0.5;
+			}
+		}
+		
+		// Fire at enemies
+		while (Base_Entrance.Enemy_Count > 0) {
+			action Fire on Base_Entrance;
+			wait 1.0;
+		}
+		
+		// Move back to the station
+		moveto Guard_Station;
+		wait 10.0;
+	}
+}
+
+moveto Guard_Station;
