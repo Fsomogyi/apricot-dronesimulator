@@ -1,0 +1,95 @@
+package hu.bme.mit.mdsd.dns2016.behaviour.queries
+
+import "hu.bme.mit.mdsd.dns2016.drones.behaviour"
+import "hu.bme.mit.mdsd.dns2016.drones"
+
+@Constraint(key = {"ne"}, targetEditorId = "*", severity = "error", message = "Invalid or empty name!")
+pattern invalidName(ne : NamedElement) {
+	NamedElement.name(ne, name);
+	check(!name.matches("^[A-Z].+"));
+}
+
+
+pattern instructionOfInstructMessage(ins, m) {
+	Instruct.instructions(m, ins);
+}
+
+@Constraint(key = {"p"}, targetEditorId = "*", severity = "error", message = "Invalid duration of instruction!") 
+pattern invalidPauseDuration(p: Pause) {
+	Pause.duration(p, d);
+	check(d <= 0);
+}
+
+@Constraint(key = {"wfm"}, targetEditorId = "*", severity = "error", message = "Invalid timeout of instruction!") 
+pattern invalidWaitForMessageTimeout(wfm: WaitForMessage) {
+	WaitForMessage.timeout(wfm, to);
+	check(to <= 0);
+}
+
+pattern moveToOfInstructionMessage(mt) {
+	MoveTo(mt);
+	Instruct.instructions(_, mt);
+}
+
+pattern isRealMoveTo(mt: MoveTo) {
+	neg find moveToOfInstructionMessage(mt);
+}
+
+pattern moveToChargeStation(mt: MoveTo) {
+	ChargeStation(cs);
+	MoveTo.fieldObject(mt, cs);
+	find isRealMoveTo(mt);
+}
+
+@Constraint(key = {"db"}, targetEditorId = "*", severity = "warning", message = "There is no instruction that moves the drone to a charging station -- your drone might get depleted before completion!") 
+pattern warningDroneRecharge(db : DroneBehaviour) {
+	DroneBehaviour(db);
+	neg find moveToChargeStation(_);
+}
+
+@Constraint(key = {"lift"}, targetEditorId = "*", severity = "error", message = "Invalid Lift instruction - weight is greater than the max payload of the drone(s)!")
+pattern invalidLiftInstruction(lift : Lift) {
+	DroneBehaviour.drones(db, d);
+	DroneBehaviour.instructions(db, lift);
+	Lift.target(lift, target);
+	MovableObject.weight(target, w);
+	Drone.maxPayload(d, mp);
+	check(mp < w);
+}
+
+pattern allLiftInstructions(l) {
+	Lift(l);
+	neg find instructionOfInstructMessage(l, _);
+}
+
+pattern allPlaceObjectInstructions(po) {
+	PlaceObject(po);
+	neg find instructionOfInstructMessage(l, _);
+}
+
+@Constraint(key = {"db"}, targetEditorId = "*", severity = "warning", message = "Not every Lift instruction is followed by a PlaceObject instruction!") 
+pattern warningLiftPlace(db : DroneBehaviour) {
+	DroneBehaviour(db);
+	count find allLiftInstructions(_) != count find allPlaceObjectInstructions(_);
+}
+
+
+pattern droneOfBehaviour(db : DroneBehaviour, d : Drone) {
+	DroneBehaviour.drones(db, d);
+}
+
+
+pattern wellFormedNames() {
+ 	neg find invalidName(_);
+}
+
+pattern wellFormedInstructions() {
+	neg find invalidLiftInstruction(_);
+	neg find invalidPauseDuration(_);
+	neg find invalidWaitForMessageTimeout(_);
+}
+
+pattern wellFormedBehaviourModel() {
+	find wellFormedNames();
+	find wellFormedInstructions();
+}

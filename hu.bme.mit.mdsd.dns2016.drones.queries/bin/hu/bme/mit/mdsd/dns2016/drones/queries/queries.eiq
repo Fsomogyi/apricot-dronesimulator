@@ -1,0 +1,184 @@
+package hu.bme.mit.mdsd.dns2016.drones.queries
+import "hu.bme.mit.mdsd.dns2016.drones"
+
+
+@Constraint(key = {"ne"}, targetEditorId = "*", severity = "error", message = "Invalid or empty name!")
+pattern invalidName(ne : NamedElement) {
+	NamedElement.name(ne, name);
+	check(!name.matches("^[A-Z].*"));
+}
+
+@Constraint(key = {"d", "freq"}, targetEditorId = "*", severity = "error", message = "Invalid CPU frequency of drone ($d$)!")
+pattern invalidCPUFrequency(d : Drone, freq) {
+	Drone.cpuFrequency(d, freq);
+	check(freq <= 0);
+}
+
+@Constraint(key = {"d", "memory"}, targetEditorId = "*", severity = "error", message = "Invalid memory of drone ($d$)!")
+pattern invalidMemory(d : Drone, memory) {
+	Drone.memory(d, memory);
+	check(memory <= 0);
+}
+
+@Constraint(key = {"d", "maxPayload"}, targetEditorId = "*", severity = "error", message = "Invalid maximum payload of drone ($d$)!")
+pattern invalidMaxPayload(d : Drone, maxPayload) {
+	Drone.maxPayload(d, maxPayload);
+	check(maxPayload < 0);
+}
+
+@Constraint(key = {"d", "commRange"}, targetEditorId = "*", severity = "error", message = "Invalid communication range of drone ($d$)!")
+pattern invalidCommRange(d : Drone, commRange) {
+	Drone.communicationRange(d, commRange);
+	check(commRange < 0);
+}
+
+pattern invalidSpeed(d : Drone, minSpeed, maxSpeed) {
+	Drone.minSpeed(d, minSpeed);
+	Drone.maxSpeed(d, maxSpeed);
+	
+	check (minSpeed > maxSpeed || minSpeed < 0 || maxSpeed < 0);
+}
+
+pattern invalidDrone(d : Drone) {
+	find invalidSpeed(d, _, _);
+} or {
+	find invalidCPUFrequency(d, _);
+} or {
+	find invalidMemory(d, _);
+} or {
+	find invalidCommRange(d, _);
+} or {
+	find invalidMaxPayload(d, _);
+}
+
+@Constraint(key = {"b", "lifeTime"}, targetEditorId = "*", severity = "error", message = "Invalid life time of battery!") 
+pattern invalidLifeTime(b : Battery, lifeTime) {
+	Battery.lifeTime(b, lifeTime);
+	check(lifeTime <= 0);
+}
+
+@Constraint(key = {"b", "rechargeRate"}, targetEditorId = "*", severity = "error", message = "Invalid recharge time of battery!") 
+pattern invalidRechargeRate(b : Battery, rechargeRate) {
+	Battery.rechargeRate(b, rechargeRate);
+	check(rechargeRate <= 0);
+}
+
+@Constraint(key = {"b", "remLifeTime"}, targetEditorId = "*", severity = "error", message = "Invalid remaining life time of battery!") 
+pattern invalidRemLifeTime(b : Battery, remLifeTime) {
+	Battery.lifeTime(b, lifeTime);
+	Battery.remainingLifeTime(b, remLifeTime);
+	check(remLifeTime < 0 || remLifeTime > lifeTime);
+}
+
+pattern invalidBattery(b : Battery) {
+	find invalidLifeTime(b, _);
+} or {
+	find invalidRechargeRate(b, _);
+} or {
+	find invalidRemLifeTime(b, _);
+}
+
+ @Constraint(key = {"f", "p1", "p2"}, symmetric = {"p1", "p2"}, targetEditorId = "*", severity = "error", message = "Duplicate parameter keys at field object $f$!")   
+pattern sameParametersFieldObject(f : FieldObject, p1 : Parameter, p2 : Parameter) {
+	p1 != p2;
+	
+	FieldObject.parameters(f, p1);
+	FieldObject.parameters(f, p2);
+
+	Parameter.key(p1, k1);
+	Parameter.key(p2, k2);
+
+	k1 == k2;
+}
+ 
+ @Constraint(key = {"mo", "w"}, targetEditorId = "*", severity = "error", message = "Invalid weight ($w$) of movable object $mo$!") 
+ pattern invalidWeight(mo : MovableObject, w) {
+ 	MovableObject.weight(mo, w);
+ 	check(w < 0);
+ }
+
+ @Constraint(key = {"s"}, targetEditorId = "*", severity = "error", message = "Invalid size of element $s$!")
+ pattern invalidSize(s : SizedElement) {
+ 	SizedElement.height(s, h);
+ 	SizedElement.length(s, l);
+ 	SizedElement.width(s, w);
+ 	check(h < 0 || l < 0 || w < 0);
+ }
+ 
+ pattern sizeZero(s : SizedElement) {
+ 	SizedElement.height(s, h);
+ 	SizedElement.length(s, l);
+ 	SizedElement.width(s, w);
+ 	check(h == 0 && l == 0 && w == 0);
+ }
+ 
+ pattern chargeStationOfDrone(d : Drone, cs : ChargeStation) {
+ 	Drone.chargeStation(d, cs);
+ }
+ 
+ @Constraint(key = {"se1", "se2"}, symmetric = {"se1", "se2"}, targetEditorId = "*", severity = "error", message = "Collision detected between elements $se1$ and $se2$!")
+ pattern collisionDetection(se1 : SizedElement, se2 : SizedElement) {
+ 	se1 != se2;
+ 	
+ 	neg find chargeStationOfDrone(se1, se2);
+ 	neg find chargeStationOfDrone(se2, se1);
+ 	
+ 	neg find sizeZero(se1);
+ 	neg find sizeZero(se2);
+ 	
+ 	SizedElement.x(se1, x1);
+ 	SizedElement.y(se1, y1);
+ 	SizedElement.z(se1, z1);
+ 	SizedElement.x(se2, x2);
+ 	SizedElement.y(se2, y2);
+ 	SizedElement.z(se2, z2);
+ 	
+ 	SizedElement.height(se1, h1);
+ 	SizedElement.length(se1, l1);
+ 	SizedElement.width(se1, w1);
+ 	SizedElement.height(se2, h2);
+ 	SizedElement.length(se2, l2);
+ 	SizedElement.width(se2, w2);
+ 	
+ 	check( (((x1 >= x2) && ((x1 - x2) < (l1 + l2)/2)) || ((x2 > x1) && ((x2 - x1) < (l1 + l2)/2))) &&
+ 		   (((y1 >= y2) && ((y1 - y2) < (h1 + h2)/2)) || ((y2 > y1) && ((y2 - y1) < (h1 + h2)/2))) &&
+ 		   (((z1 >= z2) && ((z1 - z2) < (w1 + w2)/2)) || ((z2 > z1) && ((z2 - z1) < (w1 + w2)/2))));
+ }
+ 
+@QueryBasedFeature
+pattern charge(b : Battery, C) {
+ 	Battery.lifeTime(b, lifeTime);
+ 	Battery.remainingLifeTime(b, remLifeTime);
+ 	
+ 	C == eval(remLifeTime / lifeTime * 100);
+}
+
+ pattern wellFormedNames() {
+ 	neg find invalidName(_);
+ }
+ 
+ pattern wellFormedDrones() {
+	neg find invalidDrone(_);
+}
+
+pattern wellFormedBatteries() {
+	neg find invalidBattery(_);
+}
+
+pattern wellFormedFieldObjects() {
+  	neg find sameParametersFieldObject(_, _, _);
+  	neg find invalidWeight(_, _);
+}
+
+pattern wellFormedSizesAndCollisions() {
+ 	neg find invalidSize(_);
+ 	neg find collisionDetection(_, _);
+}
+ 
+ pattern wellFormedStructuralModel() {
+ 	find wellFormedNames();
+ 	find wellFormedDrones();
+ 	find wellFormedBatteries();
+ 	find wellFormedFieldObjects();
+ 	find wellFormedSizesAndCollisions();
+ }

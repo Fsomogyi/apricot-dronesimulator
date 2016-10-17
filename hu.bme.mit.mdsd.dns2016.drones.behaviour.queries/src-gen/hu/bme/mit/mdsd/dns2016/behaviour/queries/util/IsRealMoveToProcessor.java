@@ -1,0 +1,26 @@
+package hu.bme.mit.mdsd.dns2016.behaviour.queries.util;
+
+import hu.bme.mit.mdsd.dns2016.behaviour.MoveTo;
+import hu.bme.mit.mdsd.dns2016.behaviour.queries.IsRealMoveToMatch;
+import org.eclipse.incquery.runtime.api.IMatchProcessor;
+
+/**
+ * A match processor tailored for the hu.bme.mit.mdsd.dns2016.behaviour.queries.isRealMoveTo pattern.
+ * 
+ * Clients should derive an (anonymous) class that implements the abstract process().
+ * 
+ */
+@SuppressWarnings("all")
+public abstract class IsRealMoveToProcessor implements IMatchProcessor<IsRealMoveToMatch> {
+  /**
+   * Defines the action that is to be executed on each match.
+   * @param pMt the value of pattern parameter mt in the currently processed match
+   * 
+   */
+  public abstract void process(final MoveTo pMt);
+  
+  @Override
+  public void process(final IsRealMoveToMatch match) {
+    process(match.getMt());
+  }
+}

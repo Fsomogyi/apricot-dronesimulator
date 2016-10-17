@@ -1,0 +1,100 @@
+grammar hu.bme.mit.mdsd.dns2016.drones.behaviour.text.BehavDsl with org.eclipse.xtext.common.Terminals
+
+import "platform:/resource/hu.bme.mit.mdsd.dns2016.drones.behaviour/model/behaviour.ecore" as behav
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+import "platform:/resource/hu.bme.mit.mdsd.dns2016.drones/model/drones.ecore" as drones
+
+generate behavdslmodel "hu.bme.mit.mdsd.dns2016.drones.behaviour.BehavDSLModel"
+
+// TODO: separate config files?
+BehavDSL:
+	importedMission=Import
+	behav=DroneBehaviour
+;
+
+DroneBehaviour returns behav::DroneBehaviour:
+	'behav'
+	name=EString
+	'(' 'interrupt' '=' canBeInterrupted?=EBoolean ')' ';'
+	'drones' '{' drones+=[drones::Drone|ID] ( "," drones+=[drones::Drone|ID])* '}'
+	instructions+=Instruction (instructions+=Instruction)*;
+
+Import:
+    'import' importName=STRING;
+
+Instruction returns behav::Instruction:
+	MoveTo | Pause | PerformAction | Choice | WaitForMessage | While | Lift | PlaceObject | SendMessage | Instruct;
+
+MoveTo returns behav::MoveTo:
+	'moveto'
+	fieldObject=[drones::FieldObject|ID]
+	';';
+
+Pause returns behav::Pause:
+	'wait'
+	duration=EFloat
+	';';
+
+PerformAction returns behav::PerformAction:
+	'action'
+	action=[drones::Action|EString]
+	'on'
+	target=[drones::FieldObject|EString]
+	';';
+
+Choice returns behav::Choice:
+	'if' condition=Condition
+	'{' trueBranch+=Instruction (trueBranch+=Instruction)* '}'
+	('else' '{' falseBranch+=Instruction (falseBranch+=Instruction)* '}')?;
+
+WaitForMessage returns behav::WaitForMessage:
+	'waitfor'
+	type=EString
+	timeout=EFloat
+	'{' whenArrived+=Instruction (whenArrived+=Instruction)* '}'
+	'timeout' '{' whenLost+=Instruction (whenLost+=Instruction)* '}';
+
+While returns behav::While:
+	'while' condition=Condition
+	'{' instructions+=Instruction (instructions+=Instruction)* '}';
+
+Lift returns behav::Lift:
+	'lift'
+	target=[drones::MovableObject|ID]
+	';';
+	
+PlaceObject returns behav::PlaceObject:
+	{behav::PlaceObject}
+	'place' 'object' ';';
+
+Instruct returns behav::Instruct:
+	'send' 'instruct'
+	'{'	instructions+=Instruction (instructions+=Instruction)* '}'
+	;
+
+SendMessage returns behav::SendMessage:
+	'send' 'msg'
+	messageType=EString
+	';';
+
+Condition returns behav::Condition:
+	{behav::Condition}
+	'('
+	(fieldObject = [drones::FieldObject|ID])
+	'.'
+	key=EString
+	operation=ConditionKind
+	value=EString
+	')';
+	
+enum ConditionKind returns behav::ConditionKind:
+	EQUALS = '==' | NOT_EQUALS = '!=' | GREATER_THAN = '>' | LESSER_THAN = '<';
+	
+EString returns ecore::EString:
+	STRING | ID | INT | EBoolean;
+	
+EFloat returns ecore::EFloat:
+	INT? '.' INT (('E'|'e') '-'? INT)?;
+	
+EBoolean returns ecore::EBoolean:
+	'true' | 'false';
