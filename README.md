@@ -11,6 +11,9 @@ Apricot Drone Simulator enables the definition of cooperative drones and their b
 * Xtend 2.9.2
 * DESMO-J 2.5.1c
 
+## Presentations
+Presentations that showcase the different phases of the project can be found under **_hu.bme.mit.mdsd.dns2016.presentations_**. Please note that the language of the first presentation is Hungarian.
+
 ## User's Guide
 1. The metamodel of the drones can be found in the project **_hu.bme.mit.mdsd.dns2016.drones_**, under the **_model_** folder. The model can be generated using the **_genmodel_** file, although the cloned repository already contains the generated files.
 
